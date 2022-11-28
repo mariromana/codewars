@@ -26,20 +26,42 @@
 
 //   console.log(countSheep(0));
 
+// 8 kyu Array plus array
 
-var s = 'Hello {foo} - make me a {bar}';
-var o = {
-  foo : 'Jack',
-  bar : 'sandwich'
-};
+// function arrayPlusArray(arr1, arr2) {
+//   let arr3 = arr1.concat(arr2);
+//   let res = 0;
+//   for( let i = 0; i < arr3.length; i++) {
+//    res += arr3[i];
+//   }
+//   return res; 
+
+// console.log(arrayPlusArray([1,2,3], [2,5,6]));
 
 
-var format = function ( obj) {
-    if(!Array.isArray(obj)) {
-        Object.values(obj);
-    }
-};
-console.log(format( var o = {
-    foo : 'Jack',
-    bar : 'sandwich'
-  };));
+
+function generateShape(integer){
+let result = '';
+for(let i = 1; i <= integer; i++) {
+  for (let j = 0; j < integer; j++) {
+     result += '+';
+  }
+  if (integer === i - 2 ) break;
+  result += '\n';
+ 
+}
+return result ;
+}
+console.log(generateShape(3));
+
+let integer = 5;
+let result = '';
+for(let i = 1; i <= integer ; i++) {
+  for (let j = 0; j < integer - 1; j++) {
+    result += '+';
+  }
+
+   result += '\n';
+
+}
+console.log(result.length);
